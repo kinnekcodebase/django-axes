@@ -65,9 +65,6 @@ class AxesProxyHandler(AbstractAxesHandler, AxesBaseHandler):
         """
 
         if request is None:
-            log.error(
-                "AXES: AxesProxyHandler.update_request can not set request attributes to a None request"
-            )
             return
         if not hasattr(request, "axes_updated"):
             request.axes_locked_out = False
